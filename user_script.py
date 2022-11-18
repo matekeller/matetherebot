@@ -1,6 +1,10 @@
 import subprocess
+import os
 import requests
 import json
+from dotenv import find_dotenv, load_dotenv
+
+load_dotenv((find_dotenv()))
 
 aps = [
     "04:5F:B9:2F:56:2F",
@@ -26,5 +30,5 @@ iwconfig.wait()
 output = output.decode('ascii')
 
 if (output in aps):
-    requests.post('https://URL/max_present', json={"max_token": "1234"})
+    requests.post('https://' + os.environ.get('URL') + '/max_present', json={"max_token": os.environ.get('MAXTHERE_TOKEN')})
     print(output)
