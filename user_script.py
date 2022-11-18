@@ -1,4 +1,6 @@
 import subprocess
+import requests
+import json
 
 aps = [
     "04:5F:B9:2F:56:2F",
@@ -24,5 +26,5 @@ iwconfig.wait()
 output = output.decode('ascii')
 
 if (output in aps):
-
+    requests.post('https://URL/max_present', json={"max_token": "1234"})
     print(output)

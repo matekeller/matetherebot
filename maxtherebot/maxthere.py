@@ -54,7 +54,7 @@ class MaxHttpHandler(tornado.web.RequestHandler):
     def _validate_post(self):
         ct_header = self.request.headers.get("Content-Type", None)
         if ct_header != 'application/json':
-            raise tornado.web.HTTPError(403)
+            raise tornado.web.HTTPError(415)
     
     def _validate_payload(self, data):
         if data.get('max_token', 0) == max_token:
