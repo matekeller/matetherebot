@@ -3,6 +3,7 @@ certifi==2019.9.11
 cffi==1.12.3
 Click==7.0
 cryptography==2.7
+python-dotenv
 future==0.17.1
 pycparser==2.19
 python-telegram-bot==12.1.1

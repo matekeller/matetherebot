@@ -1,3 +1,4 @@
+import os
 import logging
 from datetime import datetime, timedelta
 
@@ -14,6 +15,8 @@ from telegram.ext import Updater
 
 max_token = None
 
+LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
+logging.basicConfig(level=LOGLEVEL)
 
 class MaxThereState(object):
     def __init__(self):
