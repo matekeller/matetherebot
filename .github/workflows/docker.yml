@@ -1,0 +1,20 @@
+name: Docker
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/testing'
+    steps:
+      - uses: actions/checkout@v3
+      - name: Log In at ghcr.io
+        run: echo "${{secrets.GITHUB_TOKEN}}" | docker login ghcr.io -u matekeller --password-stdin
+      - name: Build and Push image to ghcr.io
+        run: |
+          image="ghcr.io/matekeller/matetherebot"
+          docker build . --pull --tag "$image"
+          docker push "$image"
