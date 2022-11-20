@@ -30,5 +30,5 @@ iwconfig.wait()
 output = output.decode('ascii')
 
 if (output in aps):
-    requests.post('https://' + os.environ.get('URL') + '/max_present', json={"max_token": os.environ.get('MAXTHERE_TOKEN')})
+    requests.post(os.environ.get('URL') + '/max_present', json={"max_token": os.environ.get('MAXTHERE_TOKEN')})
     print(output)
