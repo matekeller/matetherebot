@@ -19,7 +19,8 @@ aps = [
     "54:8A:BA:CD:76:6F",
     "54:8A:BA:CB:AC:AF",
     "54:8A:BA:CD:67:4F",
-    "14:16:9D:55:92:60"
+    "14:16:9D:55:92:60",
+    "04:5F:B9:2F:78:80"
 ]
 
 iwconfig = subprocess.Popen(('iwconfig', 'wlp0s20f3'), stdout=subprocess.PIPE)
