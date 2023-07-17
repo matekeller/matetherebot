@@ -1,0 +1,11 @@
+[Unit]
+Description=matetherebot user_script
+
+[Service]
+Type=oneshot
+ExecStart=/home/msrd0/git/matetherebot/user_script.py
+Environment="URL=https://matetherebot.msrd0.de"
+Environment="MAXTHERE_TOKEN=hallomax"
+User=msrd0
+Group=msrd0
+WorkingDirectory=/tmp
