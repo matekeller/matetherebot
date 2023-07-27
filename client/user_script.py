@@ -12,8 +12,15 @@ load_dotenv((find_dotenv()))
 aps = [
     "ap-2356-6u07",
     "ap-2356-6u09",
-    "ap-2356-6u11"
-    # Maybe add more nearby APs if needed
+    "ap-2356-6u10b",
+    "ap-2356-6u11",
+    "ap-2356-5057",
+    "ap-2356-5052",
+    "ap-2356-6006",
+    "ap-2356-6009",
+    "ap-2356-6011",
+    "ap-2356-6013",
+    "ap-2356-6001a"
 ]
 
 headers = {"Accept": "application/json"}
