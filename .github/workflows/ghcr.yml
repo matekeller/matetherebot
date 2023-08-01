@@ -1,0 +1,17 @@
+name: Clean up GitHub Container Registry
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/delete-package-versions@v4
+        with:
+          package-name: matetherebot
+          package-type: container
+          min-versions-to-keep: 1
+          delete-only-untagged-versions: true
