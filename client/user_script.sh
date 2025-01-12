@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/bash
 
 aps=("04:5F:B9:2F:56:2F"
     "54:8A:BA:CC:80:AF"
