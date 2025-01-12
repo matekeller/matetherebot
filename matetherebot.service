@@ -3,7 +3,7 @@ Description=matetherebot user_script
 
 [Service]
 Type=oneshot
-ExecStart=/home/msrd0/git/matetherebot/client/user_script.py
+ExecStart=/home/msrd0/git/matetherebot/client/user_script.sh
 Environment="URL=https://matetherebot.msrd0.de"
 Environment="MAXTHERE_TOKEN=hallomax"
 User=msrd0
